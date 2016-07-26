@@ -6,6 +6,6 @@ python:
   - "2.7"
   - "3.4"
 before_install:
-  - docker pull hammerlab/mhcflurry
+  - docker pull hammerlab/mhcflurry:gpu
 script:
-  - docker run -t -i hammerlab/mhcflurry echo "hullo!"
+  - docker run -t -i hammerlab/:gpu echo "hullo!"
