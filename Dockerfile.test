@@ -1,0 +1,7 @@
+FROM armish/pyensembl:0.9.4
+MAINTAINER B. Arman Aksoy <arman@aksoy.org>
+
+WORKDIR /foo
+ADD . /foo
+RUN bash test.sh 0
+RUN bash test.sh 1
