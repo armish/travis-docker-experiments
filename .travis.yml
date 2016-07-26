@@ -4,4 +4,5 @@ services:
 before_install:
   - docker pull armish/pyensembl:0.9.4
 script:
+  - docker build -f ./Dockerfile.pyensembl -t "ensemble-cache" .
   - docker build -f ./Dockerfile.test -t "my-dummy-test" .
