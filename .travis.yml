@@ -1,8 +1,9 @@
 sudo: required
-services: 
-  - docker
+services:
+- docker
 before_install:
-  - docker pull armish/pyensembl:0.9.4
 script:
-  - docker build -f ./Dockerfile.pyensembl -t "ensemble-cache" .
-  - docker build -f ./Dockerfile.test -t "my-dummy-test" .
+- env
+deploy:
+  password:
+    secure: I8UVghq4145CNJiGrHCnWJPhNidZcAIkV6IYK7GrdeHlKRA56dFFLA1/jqOS+W7d1VDGvHmBzqKI35wKNRfECazE9GL0xeZR9dlnSqpWRixtYf+pzYtGMjXPu/ADtp0ne+HabSm+hL3v9XAydI4B6Qjb8b1S7XmjZ1k47PkcvDwjKrP0qopuG1n5Ca+lgcjESJ8j1hyRETsmyKeY8NlHGYibBHWTbmxQkcUPDm9j0t7342+6wu1rXyuCcAVGf42KRF/XpqpVFGYp12onAPpiIrU92lXLqXLPtz+JhyhY0dE42qJIGsF8E7Hz8izRmE51xUvGdvd8Qw1MHOBG6d6V8L0XY2NHNMIpSRzAcHCKWZig4LfOMrV1Qbd+aBHb1+vlfGXhfxeI8KAAHRSLObafrDhZ95poZfcFNAu7Fkw5VUkYBqHqD4NAAST+m9Jh3mUMvzQIn71kLTOChhCMYEtPTz8CeQAXBeo1Z8VgEYuaCTqDWaOznCghNxXW65mIBa4dFRP6aqMwg5OHCQpIjM2ORK6BdN5ht6qon7jTnUsZ19ZP0tEMLkoEWTUuJQmh7dsW56zk5FE4ujwFKgjsu7eWZpnyi8dgrl7PnwH/0VG+RpPBt2L9p0hSV0cHGXyqCvdjOQLm6xzZ198CIQOm+STQAAbfMVTY2yiSQHxsrGgnKa0=
